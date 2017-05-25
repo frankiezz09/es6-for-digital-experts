@@ -4045,9 +4045,6 @@ console.log((0, _module2.divide)(15, 5));
 
 console.log(module3.modulo(17, 5));
 
-// Note: as best practice, put all your imports on top of your files. The arrangement here are
-// just for research purposes.
-
 // imports are mainly used on a production setup to import not only custom modules, but third
 // party modules. For this scenario, we'll import lodash
 
@@ -4058,7 +4055,15 @@ var array2 = ['a', 'd', 'e'];
 
 console.log(_.find(array, function (o) {
   return o === 'b';
-}));
+})); // finds instances of 'b' in an array
+console.log(_.last(array2)); // returns last array value, which is 'e'
+
+// Check out lodash docs for more library features: https://lodash.com/docs/4.17.4
+
+// They are best use for all your app constants and configs (usually)
+
+// Note: as best practice, put all your imports on top of your files. The arrangement here are
+// just for research purposes.
 
 /***/ })
 /******/ ]);
