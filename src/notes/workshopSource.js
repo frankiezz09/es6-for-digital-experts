@@ -307,7 +307,7 @@ console.log(tlMessage2);
 
 /**
  * 
- * Destructuring Assignments (Works on both arrays/objects, but our example will use objects for clarity)
+ * Destructuring Object Assignments (Works on both arrays/objects, but our example will use objects for clarity)
  * 
  */
 
@@ -442,18 +442,6 @@ let p = new Promise((resolve, reject) => {
         // likewise, reject returns whatever is inside its parameter
         reject('no luck');
     }
-
-    // Let's simulate an API call by adding setTimeout()
-
-    setTimeout(() => {
-        if(true) {
-            // resolve returns whatever is inside its parameter
-            resolve('it has passed');
-        } else {
-            // likewise, reject returns whatever is inside its parameter
-            reject('no luck');
-        }
-    }, 2000);
 });
 
 p.then((data) => {
@@ -616,7 +604,7 @@ console.log(graphGenerator.next().value);
 
 // Objects don't have innate methods for manipulation
 
-var myMap = new Map();
+let myMap = new Map();
 
 //API
 /*
