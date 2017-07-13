@@ -22,7 +22,7 @@
  * 
  */
 
-var artistNames = [
+let artistNames = [
 	'Paramore', 
 	'The Beatles', 
 	'Jackson Five', 
@@ -34,18 +34,51 @@ var artistNames = [
 	'Marilyn Manson'
 ];
 
-const sortedNames = artistNames.sort((a, b) => a > b);
+let clearTable = () => {
+	document.querySelector('#names').innerHTML = '';
+}
 
-function generateTable() {
+let generateTable = () => {
 	console.log('generate table!');
 	document.querySelector('#names').innerHTML = 
-		sortedNames.map(function(name, index) {
-			return '<li data-id="'+ index + '">' + name + '</li>';	
-		}).join('');
+		artistNames
+			.map(function(name) {
+				console.log(name);
+				return `<li>${name}</li>`;
+			})
+			.join('');
 }
+
+let sortAlphabetical = () => {
+	let sortedNames = artistNames.sort(function(a, b) {
+		return a > b;
+	});
+	console.log(sortedNames);
+}
+
+let addNewName = (name) => {
+	artistNames.push(name);
+	clearTable();
+	generateTable();
+}
+
+let addButton = document.querySelector('#add-button');
+
+addButton.addEventListener('click', () => {
+	const name = document.querySelector('#new-entry').value;
+	console.log(name); 
+	addNewName(name);
+});
+
 
 /**
  * We code right below :) 
  */
 
+addNewName('Xian Gaza');
+addNewName('Jake Zyrus');
+
 generateTable();
+
+sortAlphabetical();
+
