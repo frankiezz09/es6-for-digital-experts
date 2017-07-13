@@ -1,23 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ES6 for Digital Experts</title>
-  <!-- <link rel="stylesheet" href="./main.css"> -->
+    <meta charset="UTF-8">
+    <title>ES6 App</title>
 </head>
-<body style="font-family: Arial, Helvetica, sans-serif">
-    <center>
-        <h1>Welcome to ES6 for Digital Experts!</h1>
-        <br>
-        <span>We'll only be using our terminals for this brownbag session</span>
-        <br>
-        <br>
-        <span>We'll also use <strong>Chrome</strong> for this workshop, to open the console on Chrome:</span>
-        <h3>For Windows/Unix users: Press <kbd>F12</kbd> </h3>
-        <h3>For OSX users: Press <kbd>Cmd+Opt+J</kbd> </h3>
-        <span>Then click on the <em>Console</em> tab to see your console.log outputs!</span>
+<body>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: url("https://source.unsplash.com/71vAb1FXB6g/2000x2000");
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-    </center>
+        #names {
+            list-style: inside square;
+            font-size: 20px;
+            background: white;
+            width: 500px;
+            margin: auto;
+            padding: 0;
+            box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+        #names li {
+            border-bottom: 1px solid #efefef;
+            padding: 20px;
+        }
+        #names li:last-child {
+            border-bottom: 0;
+        }
+
+        a {
+            color: #ffc600;
+            text-decoration: none;
+        }
+
+        #add-name {
+            list-style: inside square;
+            font-size: 20px;
+            background: white;
+            width: 500px;
+            margin: auto;
+            padding: 0;
+            box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+        #add-name li {
+            border-bottom: 1px solid #efefef;
+            padding: 20px;
+        }
+        #add-name li:last-child {
+            border-bottom: 0;
+        }
+
+        a {
+            color: #ffc600;
+            text-decoration: none;
+        }
+
+        #new-entry {
+            height: 30px;
+            width: 50%;
+        }
+
+        #search-entry {
+            height: 30px;
+            width: 50%;
+            margin-right: 90px;
+        }
+
+        #add-button {
+            border: none;
+            height: 30px;
+            margin-left: 10px;
+            border-radius: 5px;
+            background: #34A853;
+            color: #FFF;
+            cursor: pointer;
+        }        
+
+        .list-actions {
+            list-style: none;
+            text-align: center;
+        }
+
+        .list-action-selection {
+            list-style: none;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .list-action-selection-button {
+            list-style: none;
+            text-align: center;
+            cursor: default;
+        }
+                
+    </style>
+
+    <ul id="names"></ul>
+    
+    <ul id="add-name">
+        <li class="list-actions action">
+            <h3>List Actions</h3>
+        </li>
+        <li class="list-action-selection action" data-action="a-z">
+            Sort A to Z
+        </li>
+        <li class="list-action-selection action" data-action="a-z">
+            Sort Z to A
+        </li>
+        <li class="list-action-selection-button">
+            Add: <input type="text" id="new-entry" placeholder="New Entry Here"><button id="add-button" data-action="add">ADD IT!</button>
+        </li>
+        <li class="list-action-selection-button">
+            Search: <input type="text" id="search-entry" placeholder="Search Entry Here">
+        </li>
+    </ul>
+
     <script src="./app.bundle.js" type="text/javascript"></script>
+
 </body>
 </html>
