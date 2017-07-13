@@ -44,6 +44,8 @@ function generateTable() {
 		}).join('');
 }
 
-
+/**
+ * We code right below :) 
+ */
 
 generateTable();
